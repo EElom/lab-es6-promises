@@ -28,10 +28,31 @@
 
 
 // Iteration 1 - using callbacks
-// ...
+
+ getInstruction(0, ()=>{
+  getInstruction(1, ()=>{
+    getInstruction(2, ()=>{
+      getInstruction(3, ()=>{
+        getInstruction(4, ()=>{
+        });
+      });
+     });
+  });
+});
+
 
 // Iteration 2 - using promises
-// ...
+
+
+
+obtainInstruction(0)
+  .then(() => {
+    return instruction(1);
+  })
+.catch(() => console.error(error));
+
+
+
 
 // Iteration 3 using async/await
 // ...
